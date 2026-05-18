@@ -25,6 +25,9 @@ JLinkLog.txt     # J-Link 调试器生成的日志文件[reference:8]
 *.htm            # 构建报告文件[reference:14]
 *.build_log.htm  # 编译日志[reference:15]
 *.dep            # 旧版依赖文件[reference:16]
+*.uvguix.M3658
+*.uvguix
+*.uvoptx
 
 # --- 构建/中间文件目录 ---
 MDK-ARM/         # Keil 默认的构建输出目录[reference:17]

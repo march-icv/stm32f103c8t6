@@ -20,7 +20,7 @@
 
 #### 编译器
 
-##### ARM COMPLILER5
+##### ARM COMPILER5
 
 ##### RESET AND RUN
 

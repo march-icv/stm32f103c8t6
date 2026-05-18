@@ -34,7 +34,7 @@ MDK-ARM/         # Keil 默认的构建输出目录[reference:17]
 Objects/         # 自定义目标文件目录
 Listings/        # 自定义列表文件目录
 DebugConfig/     # 调试配置文件夹[reference:18]
-
+RTE/
 # --- 备份与临时文件 ---
 *.bak            # Keil 自动生成的工程备份文件[reference:19]
 *.__i            # 备份文件

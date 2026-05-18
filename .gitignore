@@ -1,0 +1,63 @@
+# ------------------------------
+# Keil MDK 工程专用忽略规则
+# ------------------------------
+
+# --- 用户专属配置与环境文件 ---
+*.uvoptx         # 用户工程选项(包含本地调试器配置、断点等)[reference:2]
+*.uvguix.*       # Keil IDE 的用户界面布局文件[reference:3][reference:4]
+*.uvgui.*        # 旧版界面布局文件[reference:5]
+*.ini            # 调试脚本，可能包含本地硬件调试器配置[reference:6]
+*.cdb            # 调试配置数据库[reference:7]
+JLinkLog.txt     # J-Link 调试器生成的日志文件[reference:8]
+*.jlink          # J-Link 调试脚本(本地配置)[reference:9]
+
+# --- 编译输出文件(可重新生成，体积大) ---
+*.o              # 目标文件
+*.obj            # 目标文件(Windows 风格)
+*.d              # 依赖文件[reference:10]
+*.crf            # 交叉引用文件[reference:11]
+*.axf            # ELF 格式的可执行文件(含调试信息)
+*.hex            # HEX 烧录文件
+*.bin            # 二进制镜像文件
+*.map            # 内存映射文件(用于分析，但属生成物)
+*.lst            # 汇编列表文件[reference:12]
+*.lnp            # 链接器输入文件[reference:13]
+*.htm            # 构建报告文件[reference:14]
+*.build_log.htm  # 编译日志[reference:15]
+*.dep            # 旧版依赖文件[reference:16]
+*.uvguix.M3658
+*.uvguix
+*.uvoptx
+*.scvd
+*.bat
+# --- 构建/中间文件目录 ---
+MDK-ARM/         # Keil 默认的构建输出目录[reference:17]
+Objects/         # 自定义目标文件目录
+Listings/        # 自定义列表文件目录
+DebugConfig/     # 调试配置文件夹[reference:18]
+RTE/
+Objects/
+# --- 备份与临时文件 ---
+*.bak            # Keil 自动生成的工程备份文件[reference:19]
+*.__i            # 备份文件
+*._ia            # 备份文件
+*.scvd           # 源浏览信息文件(Source Code View Data)[reference:20]
+*.iex            # 中间文件[reference:21]
+
+# --- 其他 IDE 或编辑器文件 ---
+.vscode/         # VS Code 配置目录
+.idea/           # JetBrains IDE 配置目录
+*.user           # 用户工具链配置[reference:22]
+.DS_Store        # macOS 系统文件
+Thumbs.db        # Windows 缩略图缓存[reference:23]
+
+# --- STM32CubeMX (如果使用) ---
+.mxproject       # CubeMX 生成的临时项目文件[reference:24]
+
+# --- 明确不应该忽略的核心文件 (用 ! 来排除) ---
+# !*.uvprojx      # 确保不忽略 Keil 工程文件
+# !*.c            # 确保不忽略 C 源文件
+# !*.h            # 确保不忽略头文件
+# !*.s            # 确保不忽略汇编启动文件
+# !*.sct          # 确保不忽略分散加载文件
+# !*.ld           # 确保不忽略链接脚本(若适用)
